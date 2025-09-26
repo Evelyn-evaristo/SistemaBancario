@@ -10,8 +10,9 @@ public class AppSimples {
     static float saque = 0.0f;
 
     static class Texto {
-        String desejo = "Digite o valor desejado do saque:";
+        String desejo = "\nDigite o valor desejado do saque:";
         String menu = """
+        \n
                 Por favor insira uma das opções desejadas:
                 1 - Sacar
                 2 - Depositar
@@ -19,10 +20,10 @@ public class AppSimples {
                 4 - Emitir Extrato
                 0 - Sair
                 """;
-        String insuficiente = "Saldo Insuficiente. Deposite a quantia desejada";
-        String digite = "Digite a quantia desejada";
-        String atualizado = "Tudo certo. Já foi atualizado!!!";
-        String erro = "Houve um erro";
+        String insuficiente = "\nSaldo Insuficiente. Deposite a quantia desejada";
+        String digite = "\nDigite a quantia desejada";
+        String atualizado = "\nTudo certo. Já foi atualizado!!!";
+        String erro = "\nHouve um erro";
     }
     
 static Texto textos = new Texto();
@@ -87,14 +88,19 @@ static Texto textos = new Texto();
                 break;
             
             case 3:
-                consultarSaldo();
-
+            System.out.println("\n");
+                System.out.println(saldo);
+                break;
             case 4:
+            System.out.println("\n");
                 exibirExtrato();
-            
+                break;
             case 0:
+            System.out.println("\n");
                 System.out.println("Obrigada... Tchau");
+                break;
             default:
+            System.out.println("\n");
                 System.out.println("Opção Inválida");
                 break;
         }
